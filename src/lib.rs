@@ -78,6 +78,7 @@ impl FullAdder {
     }
 }
 
+#[cfg(test)]
 trait WithCarryIn {
     fn with_carry_in(carry_in: Bit) -> FullAdder;
 }

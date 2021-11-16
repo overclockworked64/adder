@@ -167,7 +167,7 @@ mod tests {
         case(Bit(1), Bit(1), Bit(0), Bit(1), Bit(0)),
         case(Bit(1), Bit(1), Bit(1), Bit(1), Bit(1))
     )]
-    fn full_add(a: Bit, b: Bit, carry_in: Bit, expected_carry_out: Bit, expected_sum: Bit) {
+    fn full_adder(a: Bit, b: Bit, carry_in: Bit, expected_carry_out: Bit, expected_sum: Bit) {
         let mut adder = FullAdder::with_carry_in(carry_in);
         adder.add(a, b);
         assert_eq!(adder.carry_out, expected_carry_out);
